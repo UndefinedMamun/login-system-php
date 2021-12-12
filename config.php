@@ -3,7 +3,7 @@
 <?php
 
     // Declaration of PDO's parameters.
-    $dsn = "mysql:dbname=custom;host=127.0.0.1";
+    $dsn = "mysql:dbname=login_system;host=127.0.0.1";
     $dbuser = "root";
     $dbpass = "";
 
