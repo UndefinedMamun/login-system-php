@@ -1,5 +1,3 @@
-<!-- This snippet was made by Glori4n(https://glori4n.com) as an exercise -->
-
 <?php 
 require 'header.php';
 session_start();
@@ -35,16 +33,25 @@ if(!isset($_SESSION["id"]) && empty($_SESSION["id"])){
     }
 
 ?>
+    <div class="dgn1 dgn "></div>
+    <div class="dgn2 dgn"></div>
+    <div class="dgn3 dgn"></div>
+    <div class="dgn4 dgn"></div>
+    <div class="card">
+        <h1 class="loginH" >Log<span class="i">i</span>ng </h1>
 
-    <h2>Please login before you can access the system:</h2>
-
-    <form method="POST">
-        <label>E-mail:</label>
-        <input type="email" name="email">
-        <label>Password:</label>
-        <input type="password" name="password">
-        <input type="submit" name="submit">
-    </form>
+        <form method="POST">
+            <div class="in1">
+            <label>E-mail</label>
+            <input type="email" name="email">
+            </div>
+            <div class="in2">
+            <label>Password</label>
+            <input type="password" name="password">
+            </div>
+            <input class="btn" type="submit" name="submit" value="SUBMIT">
+        </form>
+    </div>
 
 <?php
 

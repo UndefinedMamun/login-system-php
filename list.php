@@ -1,6 +1,7 @@
 <!-- This snippet was made by Glori4n(https://glori4n.com) as an exercise -->
 
 <?php
+require 'header.php';
 session_start();
 
 echo "<div style='text-align:center'><a href='logout.php'>Logout</a></div>";
