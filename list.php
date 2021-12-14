@@ -4,7 +4,7 @@
 require 'header.php';
 session_start();
 
-echo "<div style='text-align:center'><a href='logout.php'>Logout</a></div>";
+
 
 // Detects if there someone logged in.
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
@@ -17,8 +17,13 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
     $sql = $pdo->query($sql);
     
 ?>
+<nav class="navbar">
+<h2 style="text-align:center"><a href="add.php">Add USER</a></h2>
+<div style='text-align:center' class="logout"><a href='logout.php'>Logout</a></div>
+</nav>
 
 <!-- Table for the users' display. -->
+<div class="tcard">
 <table width="100%">
     <tr>
     <th>Name</th>
@@ -39,8 +44,8 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
     }
 ?>
 </table>
-<br>
-<h2 style="text-align:center"><a href="add.php">Add new user</a></h2>
+</div>
+
 
 <?php
 

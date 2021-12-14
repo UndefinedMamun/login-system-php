@@ -1,8 +1,7 @@
-<!-- This snippet was made by Glori4n(https://glori4n.com) as an exercise -->
 
 <?php
 session_start();
-
+require 'header.php';
 
 // Detects if there is someone logged in.
 if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
@@ -51,23 +50,31 @@ if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
     }
 ?>
 
-<h2>Update user: <?= $data["id"]; ?></h2>
+<h1 class="loginH">Update user: <?= $data["id"]; ?></h1>
+<div class="card">
 <form method="POST">
+    <div class="in1">
     <label>Name:</label>
     <input type="text" name="name" value="<?= $data["name"]; ?>">
+    </div>
+    <div class="in2">
     <label>E-mail:</label>
     <input type="email" name="email" value="<?= $data["email"]; ?>">
+    </div>
+    <dib class="in3">
     <label>Password:</label>
     <input type="password" name="password">
-    <input type="submit" name="submit">
+    </dib>
+    <input class="btn" type="submit" name="submit" value="SUBMIT">
 </form>
+</div>
 
-<form method="POST" enctype="multipart/form-data" action="receiver.php">
+<!-- <form method="POST" enctype="multipart/form-data" action="receiver.php">
     <input type="file" name="file[]" multiple>
     <input type="submit" name="submit" value="Submit File(s)">
-</form>
+</form> -->
 
-<a href="index.php">Back</a>
+<a href="index.php" class="back">Back</a>
 
 <?php
 
