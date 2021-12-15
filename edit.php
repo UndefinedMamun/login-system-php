@@ -65,7 +65,7 @@ if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
     <label>Password:</label>
     <input type="password" name="password">
     </dib>
-    <input disabled="<?php !$isAdmin ?>" class="btn" type="submit" name="submit" value="SUBMIT">
+    <input class="btn" type="submit" name="submit" value="SUBMIT">
 </form>
 </div>
 

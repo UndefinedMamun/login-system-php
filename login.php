@@ -52,7 +52,7 @@ if(!isset($_SESSION["id"]) && empty($_SESSION["id"])){
             <input type="password" name="password">
             </div>
             <input class="btn" type="submit" name="submit" value="SUBMIT">
-            <a href="registration.php">Registration</a>
+            <a style="top: 90%;" class="back" href="registration.php">Registration</a>
         </form>
     </div>
 
