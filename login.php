@@ -25,6 +25,8 @@ if(!isset($_SESSION["id"]) && empty($_SESSION["id"])){
 
             // Stores user's id on the session's id, therefore loggin in the user.
             $_SESSION["id"] = $data["id"];
+            $_SESSION['role'] = $data['role'];
+            $_SESSION['name'] = $data['name'];
             header("Location: index.php");
 
         }else{

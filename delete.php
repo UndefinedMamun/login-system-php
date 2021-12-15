@@ -5,6 +5,11 @@ session_start();
 
 // Detects if there is someone logged in.
 if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
+    $isAdmin = $_SESSION['role'] === 'admin';
+    if(!$isAdmin) {
+        echo "You are not an admin";
+        die;
+    }
 
     require 'config.php';
 

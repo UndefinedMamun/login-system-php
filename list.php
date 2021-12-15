@@ -8,7 +8,7 @@ session_start();
 
 // Detects if there someone logged in.
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
-
+    $isAdmin = $_SESSION['role'] === 'admin';
     // Receives PDO's configuration and opens a connection with the Database.
     require 'config.php';
 
@@ -28,7 +28,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
     <tr>
     <th>Name</th>
     <th>E-mail</th>
-    <th>Actions</th>
+    <?php if($isAdmin) echo "<th>Actions</th>" ?>
     </tr>
     <?php
     if($sql->rowCount() > 0){
@@ -36,7 +36,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
         echo "<tr>";
         echo "<td style='text-align:center'>".$user["name"]."</td>";
         echo "<td style='text-align:center'>".$user["email"]."</td>";
-        echo '<td style="text-align:center"><a href="edit.php?id='.$user["id"].'">Edit</a> - <a href="delete.php?id='.$user["id"].'">Delete</a>';
+        if($isAdmin) echo '<td style="text-align:center"><a href="edit.php?id='.$user["id"].'">Edit</a> - <a href="delete.php?id='.$user["id"].'">Delete</a>';
         echo "</tr>";
     }
     }else{

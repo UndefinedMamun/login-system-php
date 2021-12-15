@@ -5,7 +5,7 @@ require 'header.php';
 
 // Detects if there is someone logged in.
 if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
-
+    $isAdmin = $_SESSION['role'] === 'admin';
     // Receives PDO's configuration and opens a connection with the Database.
     require 'config.php';
 
@@ -65,7 +65,7 @@ if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
     <label>Password:</label>
     <input type="password" name="password">
     </dib>
-    <input class="btn" type="submit" name="submit" value="SUBMIT">
+    <input disabled="<?php !$isAdmin ?>" class="btn" type="submit" name="submit" value="SUBMIT">
 </form>
 </div>
 
