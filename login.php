@@ -40,7 +40,7 @@ if(!isset($_SESSION["id"]) && empty($_SESSION["id"])){
     <div class="dgn3 dgn"></div>
     <div class="dgn4 dgn"></div>
     <div class="card">
-        <h1 class="loginH" >Log<span class="i">i</span>ng </h1>
+        <h1 class="loginH" >Log &nbsp;<span class="i">i</span>n </h1>
 
         <form method="POST">
             <div class="in1">
@@ -52,6 +52,7 @@ if(!isset($_SESSION["id"]) && empty($_SESSION["id"])){
             <input type="password" name="password">
             </div>
             <input class="btn" type="submit" name="submit" value="SUBMIT">
+            <a href="registration.php">Registration</a>
         </form>
     </div>
 

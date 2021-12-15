@@ -15,7 +15,8 @@ $sql = "INSERT INTO users (name, email, password) values ('$name', '$email', '$p
 // Detects if there is a form submission, and sends $sql's query to PDO.
 if (isset($_POST["submit"])) {
     $pdo->query($sql);
-    header('Location: index.php');
+    echo "Registration Successfull! Please login.";
+    header("Refresh:1; Location: index.php");
 }
 
 ?>
